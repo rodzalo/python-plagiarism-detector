@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
-from documentInputFrame import DocumentInputFrame
-from plagiarizedDocumentsFrame import PlagiarizedDocumentsFrame
-from documentsManager import DocumentsManager
+from views.documentInputFrame import DocumentInputFrame
+from views.plagiarizedDocumentsFrame import PlagiarizedDocumentsFrame
+from managers.documentsManager import DocumentsManager
 from tkinter import messagebox
 
 class ControlFrame(ttk.Frame):

@@ -2,8 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import scrolledtext
 from tkinter import Canvas
-from verticalScrolledFrame import VerticalScrolledFrame
-from neighborsManager import NeighborsManager
+from views.verticalScrolledFrame import VerticalScrolledFrame
+from managers.neighborsManager import NeighborsManager
 
 class ParagraphComparissonFrame(ttk.Frame):
     def __init__(self, container, main_doc, comp_doc, options):

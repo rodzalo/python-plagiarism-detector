@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
-from verticalScrolledFrame import VerticalScrolledFrame
-from paragraphComparissonWindow import ParagraphComparissonWindow
-from paragraphComparissonFrame import ParagraphComparissonFrame
-from neighborsManager import NeighborsManager
+from views.verticalScrolledFrame import VerticalScrolledFrame
+from views.paragraphComparissonWindow import ParagraphComparissonWindow
+from views.paragraphComparissonFrame import ParagraphComparissonFrame
+from managers.neighborsManager import NeighborsManager
 
 class PlagiarizedDocumentsFrame(ttk.Frame):
     def __init__(self, container, doc_man, options):
