@@ -10,9 +10,13 @@ TODO
 
 ## Dependencies
 
-- Scikit-Learn
-- python-docx
+- joblib
+- lxml
 - NumPy
+- python-docx
+- Scikit-Learn
+- SciPy
+- threadpoolctl
 
 ## Screenshots
 
