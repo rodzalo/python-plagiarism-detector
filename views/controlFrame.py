@@ -34,14 +34,15 @@ class ControlFrame(ttk.Frame):
         self.pack()
 
     def changeFrame(self, container, i):
-        self.cleanFrame(container)
         if i == 0:
+            self.cleanFrame(container)
             self.frame = DocumentInputFrame(container)
             self.frame.pack(expand=True, fill="both")
             self.btn_compute.pack()
             self.pack()
         elif i == 1:
             if self.frame.isReadyToCompute():
+                self.cleanFrame(container)
                 #doc_man = DocumentManager(self.frame.obj_filename, self.frame.docs_directory)
                 #doc_man = DocumentsManager(self.frame.obj_filename, self.frame.docs_directory)
                 doc_man = DocumentsManager(self.frame.getOptions()["main_doc"], self.frame.getOptions()["dir"])
