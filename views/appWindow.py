@@ -1,11 +1,13 @@
 import tkinter as tk
 
+VERSION = 'v1.0.0'
+
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
 
         # configure the root window
-        self.title('Detector de Plagio')
+        self.title(f'Detector de Plagio {VERSION}')
 
         # configure geometry
         # window width and height
