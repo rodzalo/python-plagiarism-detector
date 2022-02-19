@@ -37,7 +37,6 @@ class ControlFrame(ttk.Frame):
         if i == 0:
             self.cleanFrame(container)
             self.frame = DocumentInputFrame(container)
-            self.frame.pack(expand=True, fill="both")
             self.btn_compute.pack()
             self.pack()
         elif i == 1:
