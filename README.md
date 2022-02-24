@@ -34,4 +34,6 @@ Click on any document and a new window will show up: the "Paragraph Comparisson"
 
 ## Screenshots
 
-TODO
+![Document Input View](/screenshots/doc-input.png)
+![Plagiarized Documents View] (/screenshots/plagiarized-docs.png)
+![Paragraph Comparisson View](/screenshots/paragraph-comparisson.png)
