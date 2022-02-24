@@ -15,7 +15,7 @@ class ControlFrame(ttk.Frame):
 
         # Compute button
         self.btn_compute = ttk.Button(
-            self, text="Calcular", command=lambda: self.changeFrame(container, 1)
+            self, text="Compare", command=lambda: self.changeFrame(container, 1)
         )
         
         # blank label (to pad the compute button)
@@ -23,7 +23,7 @@ class ControlFrame(ttk.Frame):
 
         # Return to document input button
         self.btn_return = ttk.Button(
-            self, text="Regresar", command=lambda: self.changeFrame(container, 0)
+            self, text="Go back", command=lambda: self.changeFrame(container, 0)
         )
 
         self.frame = DocumentInputFrame(container)
@@ -56,7 +56,7 @@ class ControlFrame(ttk.Frame):
             else:
                 messagebox.showerror(
                     "Error", 
-                    "Ingrese un directorio con documentos .docx y un documento .docx objetivo")
+                    "Please enter a directory with .docx documents and select a .docx objetive document.")
         
     
     def all_children(self, window) :

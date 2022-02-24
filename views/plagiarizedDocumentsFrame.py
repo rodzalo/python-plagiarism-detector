@@ -22,7 +22,7 @@ class PlagiarizedDocumentsFrame(ttk.Frame):
         # title label 
         self.label_title = ttk.Label(
             self, 
-            text="Documentos Plagiados",
+            text="Similar Documents",
             font=("Helvetica", 14))
         self.label_title.pack()
 

@@ -5,7 +5,7 @@ class ParagraphComparissonWindow(tk.Tk):
         super().__init__()
 
         # configure the root window
-        self.title('Comparasion entre párrafos')
+        self.title('Paragraph comparisson')
 
         # configure geometry
         # window width and height

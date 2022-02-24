@@ -111,14 +111,14 @@ class ParagraphComparissonFrame(ttk.Frame):
         return lambda: self.paragraphComparisson(ix)
     
     def paragraphComparisson(self, ix):
-        main_para_str = "Párrafo " + str(ix + 1) + ":\n\n" + self.main_doc.getParagraph(ix) + "\n\n"
+        main_para_str = "Paragraph " + str(ix + 1) + ":\n\n" + self.main_doc.getParagraph(ix) + "\n\n"
         
         comp_paras_str = ""
         for neighbor in self.neighbors[ix]:
             comp_para_ix = neighbor["ix"]
             comp_para = self.comp_doc.getParagraph(comp_para_ix)
             plagiarism_percentage = str(neighbor["distance"])
-            comp_para_str = "Párrafo " + str(comp_para_ix + 1) + ":\n\n" + comp_para + "\n\nPorcentaje de plagio: " + plagiarism_percentage
+            comp_para_str = "Paragraph " + str(comp_para_ix + 1) + ":\n\n" + comp_para + "\n\nPlagiarism percentage: " + plagiarism_percentage
             comp_paras_str += comp_para_str + "\n\n\n"
         
         self.ta_main_doc_paragraphs.configure(state="normal")

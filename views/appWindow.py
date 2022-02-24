@@ -8,7 +8,7 @@ class App(tk.Tk):
         super().__init__()
 
         # configure the root window
-        self.title(f'Detector de Plagio {VERSION} - github.com/{AUTHOR}')
+        self.title(f'Python Plagiarism Detector {VERSION} - github.com/{AUTHOR}')
 
         # configure geometry
         # window width and height

@@ -20,14 +20,14 @@ class DocumentInputFrame(ttk.Frame):
         # title label 
         self.label_title = ttk.Label(
             frame, 
-            text="Detector de plagio",
+            text="Plagiarism Detector",
             font=("Helvetica", 14))
         self.label_title.grid(column=1, row=0, sticky=tk.NS, ipadx=5, ipady=5)
 
         # directory label
         self.label_dir = ttk.Label(
             frame,
-            text="Seleccione un directorio",
+            text="Corpus directory",
             font=("Helvetica", 10)
         )
         self.label_dir.grid(column=1, row=1, sticky=tk.NW, ipadx=5, ipady=5)
@@ -38,13 +38,13 @@ class DocumentInputFrame(ttk.Frame):
         self.entry_dir.grid(column=1, row=2, sticky=tk.W)
 
         # directory search button
-        self.btn_search_dir = ttk.Button(frame, text="Buscar", command=self.dirDialog)
+        self.btn_search_dir = ttk.Button(frame, text="Search", command=self.dirDialog)
         self.btn_search_dir.grid(column=1, row=2, sticky=tk.E)
 
         # objective doc label
         self.label_obj_doc = ttk.Label(
             frame,
-            text="Seleccione un documento objetivo",
+            text="Objective document",
             font=("Helvetica", 10)
         )
         self.label_obj_doc.grid(column=1, row=3, sticky=tk.NW, ipadx=5, ipady=5)
@@ -55,7 +55,7 @@ class DocumentInputFrame(ttk.Frame):
         self.entry_obj_doc.grid(column=1, row=4, sticky=tk.W)
 
         # objective doc search button
-        self.btn_search_obj_doc = ttk.Button(frame, text="Buscar", command=self.fileDialog)
+        self.btn_search_obj_doc = ttk.Button(frame, text="Search", command=self.fileDialog)
         self.btn_search_obj_doc.grid(column=1, row=4, sticky=tk.E)
 
         # Empty label (for padding to the options frame)
@@ -65,7 +65,7 @@ class DocumentInputFrame(ttk.Frame):
         # options label frame
         self.lf_options = ttk.LabelFrame(
             frame,
-            text="Opciones"
+            text="Settings"
         )
         self.lf_options.grid(column=1, row=6, sticky=tk.S, ipady=5, ipadx=15)
 
@@ -75,7 +75,7 @@ class DocumentInputFrame(ttk.Frame):
         # kneighbors (documents) label
         self.label_kneighbors_docs = ttk.Label(
             self.lf_options,
-            text="Nro. de Vecinos (Documentos)"
+            text="No. of N. Neighbors (Documents)"
         )
         self.label_kneighbors_docs.grid(column=0, row=0, sticky=tk.NW, ipadx=5, ipady=5)
 
@@ -95,7 +95,7 @@ class DocumentInputFrame(ttk.Frame):
         # kneighbors (paragraphs) label
         self.label_kneighbors_para = ttk.Label(
             self.lf_options,
-            text="Nro. de Vecinos (Párrafos)"
+            text="No. of N. Neighbors (Paragraphs)"
         )
         self.label_kneighbors_para.grid(column=1, row=0, sticky=tk.E, ipadx=2, ipady=5)
 
@@ -114,7 +114,7 @@ class DocumentInputFrame(ttk.Frame):
         # n_grams label
         self.label_ngrams = ttk.Label(
             self.lf_options,
-            text="Nro. de N-gramas"
+            text="No. of N-grams"
         )
         self.label_ngrams.grid(column=0, row=2, sticky=tk.NW, ipadx=5, ipady=5)
 
@@ -135,7 +135,7 @@ class DocumentInputFrame(ttk.Frame):
         # Plagiarism percentage label (title)
         self.label_pp_title = ttk.Label(
             self.lf_options,
-            text="Porcentaje de plagio"
+            text="Plagiarism Percentage"
         )
         self.label_pp_title.grid(column=1, row=2, sticky=tk.N, ipadx=10, ipady=5)
 
@@ -164,7 +164,7 @@ class DocumentInputFrame(ttk.Frame):
         # Distance metric label
         self.label_metric = ttk.Label(
             self.lf_options,
-            text="Métrica de Distancia"
+            text="Distance Metric"
         )
         self.label_metric.grid(column=0, row=4, sticky=tk.NW, ipadx=10, ipady=5)
 
@@ -181,7 +181,7 @@ class DocumentInputFrame(ttk.Frame):
     
     def fileDialog(self):
         self.obj_filename = filedialog.askopenfilename(
-            filetypes=(("Documentos de Microsoft Word", "*.docx"),)
+            filetypes=(("Microsoft Word documents (.docx)", "*.docx"),)
         )
         self.entry_obj_doc["state"] = "normal"
         self.entry_obj_doc.insert(0, self.obj_filename)
