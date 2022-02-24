@@ -33,7 +33,7 @@ class DocumentInputFrame(ttk.Frame):
         self.label_dir.grid(column=1, row=1, sticky=tk.NW, ipadx=5, ipady=5)
 
         # directory entry
-        self.entry_dir = tk.Entry(frame, width=50)
+        self.entry_dir = tk.Entry(frame, width=54)
         self.entry_dir["state"] = "disabled"
         self.entry_dir.grid(column=1, row=2, sticky=tk.W)
 
@@ -50,7 +50,7 @@ class DocumentInputFrame(ttk.Frame):
         self.label_obj_doc.grid(column=1, row=3, sticky=tk.NW, ipadx=5, ipady=5)
 
         # objective doc entry
-        self.entry_obj_doc = tk.Entry(frame, width=50)
+        self.entry_obj_doc = tk.Entry(frame, width=54)
         self.entry_obj_doc["state"] = "disabled"
         self.entry_obj_doc.grid(column=1, row=4, sticky=tk.W)
 
@@ -77,7 +77,7 @@ class DocumentInputFrame(ttk.Frame):
             self.lf_options,
             text="No. of N. Neighbors (Documents)"
         )
-        self.label_kneighbors_docs.grid(column=0, row=0, sticky=tk.NW, ipadx=5, ipady=5)
+        self.label_kneighbors_docs.grid(column=0, row=0, sticky=tk.N, ipady=5)
 
         # kneighbors (documents) combobox
         self.kneighbors_values = (1, 2, 3, 4, 5, 6, 7, 8)
@@ -90,14 +90,14 @@ class DocumentInputFrame(ttk.Frame):
             values=self.kneighbors_values,
             state="readonly")
         self.cb_kneighbors["state"] = "disabled"
-        self.cb_kneighbors.grid(column=0, row=1, sticky=tk.W)
+        self.cb_kneighbors.grid(column=0, row=1, sticky=tk.N)
 
         # kneighbors (paragraphs) label
         self.label_kneighbors_para = ttk.Label(
             self.lf_options,
             text="No. of N. Neighbors (Paragraphs)"
         )
-        self.label_kneighbors_para.grid(column=1, row=0, sticky=tk.E, ipadx=2, ipady=5)
+        self.label_kneighbors_para.grid(column=1, row=0, sticky=tk.E, ipadx=6, ipady=5)
 
         # kneighbors (paragraphs) combobox
         self.selected_k_para = tk.IntVar()
@@ -109,14 +109,14 @@ class DocumentInputFrame(ttk.Frame):
             state="readonly"
         )
         self.cb_kneighbors_para.set(self.kneighbors_values[1])
-        self.cb_kneighbors_para.grid(column=1, row=1, sticky=tk.E)
+        self.cb_kneighbors_para.grid(column=1, row=1, sticky=tk.N)
 
         # n_grams label
         self.label_ngrams = ttk.Label(
             self.lf_options,
             text="No. of N-grams"
         )
-        self.label_ngrams.grid(column=0, row=2, sticky=tk.NW, ipadx=5, ipady=5)
+        self.label_ngrams.grid(column=0, row=2, sticky=tk.N, ipady=5)
 
         # n_grams combobox
         self.ngram_values = (1, 2, 3, 4, 5)
@@ -130,14 +130,14 @@ class DocumentInputFrame(ttk.Frame):
             state="readonly"
         )
         self.cb_ngram.set(self.ngram_values[1])
-        self.cb_ngram.grid(column=0, row=3, sticky=tk.W)
+        self.cb_ngram.grid(column=0, row=3, sticky=tk.N)
 
         # Plagiarism percentage label (title)
         self.label_pp_title = ttk.Label(
             self.lf_options,
             text="Plagiarism Percentage"
         )
-        self.label_pp_title.grid(column=1, row=2, sticky=tk.N, ipadx=10, ipady=5)
+        self.label_pp_title.grid(column=1, row=2, sticky=tk.N, ipadx=3, ipady=5)
 
         # Plagiarism percentage slider
         # Default value
@@ -166,7 +166,7 @@ class DocumentInputFrame(ttk.Frame):
             self.lf_options,
             text="Distance Metric"
         )
-        self.label_metric.grid(column=0, row=4, sticky=tk.NW, ipadx=10, ipady=5)
+        self.label_metric.grid(column=0, row=4, sticky=tk.N, ipady=5)
 
         # Distance metric combobox
         self.metric_values = ('Cosine', 'Jaccard')
@@ -177,7 +177,7 @@ class DocumentInputFrame(ttk.Frame):
             state="readonly"
         )
         self.cb_metric.set(self.metric_values[0])
-        self.cb_metric.grid(column=0, row=5, sticky=tk.W)
+        self.cb_metric.grid(column=0, row=5, sticky=tk.N)
     
     def fileDialog(self):
         self.obj_filename = filedialog.askopenfilename(
