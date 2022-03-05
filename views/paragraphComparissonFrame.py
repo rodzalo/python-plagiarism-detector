@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import scrolledtext
-from tkinter import Canvas
 from views.verticalScrolledFrame import VerticalScrolledFrame
 from managers.neighborsManager import NeighborsManager
 
@@ -79,7 +78,6 @@ class ParagraphComparissonFrame(ttk.Frame):
 
         # dict to save idx and distances based on the number
         # of paragraphs in the main doc
-        # self.neighbors = {i:[] for i in range(len(self.main_paragraphs))}
         self.neighbors = {i:[] for i in range(len(self.main_doc.getParagraphs()))}
 
         # create buttons for potential plagiarized paragraphs

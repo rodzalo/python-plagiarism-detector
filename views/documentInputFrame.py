@@ -3,7 +3,6 @@ import glob
 import os
 from tkinter import ttk
 from tkinter import filedialog
-from tkinter import Canvas
 from tkinter import Frame
 
 class DocumentInputFrame(ttk.Frame):

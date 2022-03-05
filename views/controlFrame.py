@@ -9,10 +9,6 @@ class ControlFrame(ttk.Frame):
     def __init__(self, container):
         super().__init__(container)
 
-        """container.columnconfigure(0, weight=1)
-        container.columnconfigure(1, weight=1)
-        container.columnconfigure(2, weight=1)"""
-
         # Compute button
         self.btn_compute = ttk.Button(
             self, text="Compare", command=lambda: self.changeFrame(container, 1)
@@ -27,9 +23,6 @@ class ControlFrame(ttk.Frame):
         )
 
         self.frame = DocumentInputFrame(container)
-        #self.frame.grid(column=1, row=0)
-        #self.label_empty.grid(column=1, row=7, ipady=10)
-        #self.btn_compute.grid(column=1, row=8)
         self.btn_compute.pack()
         self.pack()
 
@@ -42,12 +35,7 @@ class ControlFrame(ttk.Frame):
         elif i == 1:
             if self.frame.isReadyToCompute():
                 self.cleanFrame(container)
-                #doc_man = DocumentManager(self.frame.obj_filename, self.frame.docs_directory)
-                #doc_man = DocumentsManager(self.frame.obj_filename, self.frame.docs_directory)
                 doc_man = DocumentsManager(self.frame.getOptions()["main_doc"], self.frame.getOptions()["dir"])
-                """self.frame = PlagiarizedDocumentsFrame(
-                    container, doc_man, self.frame.getKNeighborsDocs(), self.frame.getKNeighborsPara(),
-                    self.frame.getNgram(), self.frame.getPlagiarismPercentage())"""
                 self.frame = PlagiarizedDocumentsFrame(
                     container, doc_man, self.frame.getOptions())
                 self.frame.pack(expand=True, fill="both")
